@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-09-30T17:46:32.647903" rpa="false" schemaversion="5">
+<suite id="s1" name="TC2 POST InitiatePayment" source="C:\Users\pc\Desktop\DARAJA API's AUTOMATION\Tests\TC2_POST_InitiatePayment.robot">
+<test id="s1-t1" name="Generate an OAuth Access Token Successfully" line="9">
+<kw name="Given user sets basic auth Username tfKslEMHfAz4LyUsHWuVTdJb4dQLBPl2CdAwuz1hcFNX29aa and Password eenyvddHG877IxZIfUCr3cswPqAMtySzEG5IcGvXxzXsvawvQgRBX4gWhU35cvA5" owner="keywords" source_name="user sets basic auth Username ${USERNAME} and Password ${PASSWORD}">
+<kw name="set Auth ${USERNAME} ${PASSWORD}" owner="Common" source_name="set Auth ${USERNAME} ${PASSWORD}">
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.006522" level="INFO">${USERNAME} = tfKslEMHfAz4LyUsHWuVTdJb4dQLBPl2CdAwuz1hcFNX29aa</msg>
+<arg>${USERNAME}</arg>
+<arg>${USERNAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.006522" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.007645" level="INFO">${PASSWORD} = eenyvddHG877IxZIfUCr3cswPqAMtySzEG5IcGvXxzXsvawvQgRBX4gWhU35cvA5</msg>
+<arg>${PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.007645" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.009069" level="INFO">${auth} = ['tfKslEMHfAz4LyUsHWuVTdJb4dQLBPl2CdAwuz1hcFNX29aa', 'eenyvddHG877IxZIfUCr3cswPqAMtySzEG5IcGvXxzXsvawvQgRBX4gWhU35cvA5']</msg>
+<var>${auth}</var>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.007645" elapsed="0.001424"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.010772" level="INFO">${auth} = ['tfKslEMHfAz4LyUsHWuVTdJb4dQLBPl2CdAwuz1hcFNX29aa', 'eenyvddHG877IxZIfUCr3cswPqAMtySzEG5IcGvXxzXsvawvQgRBX4gWhU35cvA5']</msg>
+<arg>${auth}</arg>
+<arg>${auth}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.009871" elapsed="0.000901"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.005409" elapsed="0.005363"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.004166" elapsed="0.006606"/>
+</kw>
+<kw name="And user adds cookies {&quot;XSRF-TOKEN&quot;:&quot;incap_ses_1018_2742146=4bysRlIywk6euaR/wKkgDpLg9mYAAAAAghC2DU3s4RXnt8ybUEzrUA==; incap_ses_1024_2742146=/AaoV/Q5zCwPxKJYxvo1Ds7f9mYAAAAAAFDGXNbzP5qAMjVxkfL6Hw==; visid_incap_2742146=kXry+h3LTMOto0B4C075bxKtwGYAAAAAQUIPAAAAAACw9E++EkrinLHuX2NpVjpO&quot;}" owner="keywords" source_name="user adds cookies ${cookies}">
+<kw name="add cookies ${cookies}" owner="Common" source_name="add cookies ${cookiesArg}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.014370" level="INFO">${cookies_object} = {'XSRF-TOKEN': 'incap_ses_1018_2742146=4bysRlIywk6euaR/wKkgDpLg9mYAAAAAghC2DU3s4RXnt8ybUEzrUA==; incap_ses_1024_2742146=/AaoV/Q5zCwPxKJYxvo1Ds7f9mYAAAAAAFDGXNbzP5qAMjVxkfL6Hw==; visid_incap_2742146=kX...</msg>
+<var>${cookies_object}</var>
+<arg>json.loads('''${cookiesArg}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.014370" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.015421" level="INFO">${cookies} = {'XSRF-TOKEN': 'incap_ses_1018_2742146=4bysRlIywk6euaR/wKkgDpLg9mYAAAAAghC2DU3s4RXnt8ybUEzrUA==; incap_ses_1024_2742146=/AaoV/Q5zCwPxKJYxvo1Ds7f9mYAAAAAAFDGXNbzP5qAMjVxkfL6Hw==; visid_incap_2742146=kX...</msg>
+<arg>${cookies}</arg>
+<arg>${cookies_object}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.015421" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.013313" elapsed="0.002108"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.012872" elapsed="0.002549"/>
+</kw>
+<kw name="When user sets endpoint with base api https://sandbox.safaricom.co.ke" owner="keywords" source_name="user sets endpoint with base api ${BASE_API}">
+<kw name="session creation ${BASE_API}" owner="Common" source_name="session creation ${API_BASE_ENDPOINT}">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-30T17:46:34.026750" level="INFO">Creating Session using : alias=mysession, url=https://sandbox.safaricom.co.ke, headers={},                     cookies={'XSRF-TOKEN': 'incap_ses_1018_2742146=4bysRlIywk6euaR/wKkgDpLg9mYAAAAAghC2DU3s4RXnt8ybUEzrUA==; incap_ses_1024_2742146=/AaoV/Q5zCwPxKJYxvo1Ds7f9mYAAAAAAFDGXNbzP5qAMjVxkfL6Hw==; visid_incap_2742146=kXry+h3LTMOto0B4C075bxKtwGYAAAAAQUIPAAAAAACw9E++EkrinLHuX2NpVjpO'}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000002A643A6B080&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${API_BASE_ENDPOINT}</arg>
+<arg>verify=False</arg>
+<arg>auth=${auth}</arg>
+<arg>debug=0</arg>
+<arg>cookies=${cookies}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-30T17:46:34.025727" elapsed="0.004256"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.022950" elapsed="0.007033"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.020799" elapsed="0.009184"/>
+</kw>
+<kw name="And user sets headers {&quot;Content-Type&quot;:&quot;application/x-www-form-urlencoded&quot;}" owner="keywords" source_name="user sets headers ${headers}">
+<kw name="add headers ${headers}" owner="Common" source_name="add headers ${headersArgs}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.033094" level="INFO">${header_string} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
+<var>${header_string}</var>
+<arg>json.loads('''${headersArgs}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.032170" elapsed="0.000924"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.033094" level="INFO">${headers} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
+<arg>${headers}</arg>
+<arg>${header_string}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.033094" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.032170" elapsed="0.002027"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.030981" elapsed="0.003216"/>
+</kw>
+<kw name="And user sets body {&quot;method&quot;:&quot;GET&quot;,&quot;service_url&quot;: &quot;https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials&quot;}" owner="keywords" source_name="user sets body ${body}">
+<kw name="add json body ${body}" owner="Common" source_name="add json body ${body}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.037298" level="INFO">${json_string} = {"method": "GET", "service_url": "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"}</msg>
+<var>${json_string}</var>
+<arg>json.dumps(${body})</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.036234" elapsed="0.001064"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.037298" level="INFO">${body} = {"method": "GET", "service_url": "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"}</msg>
+<arg>${body}</arg>
+<arg>${json_string}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.037298" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.036234" elapsed="0.002168"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.035297" elapsed="0.003105"/>
+</kw>
+<kw name="And user sends a POST Request with query /oauth/v1/generate?grant_type=client_credentials" owner="keywords" source_name="user sends a POST Request with query ${QUERY}">
+<kw name="POST a Request with query ${QUERY}" owner="Common" source_name="POST a Request with query ${QUERY}">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-09-30T17:46:34.957742" level="INFO">POST Request : url=https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials 
+ path_url=/oauth/v1/generate?grant_type=client_credentials 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Cookie': 'XSRF-TOKEN=incap_ses_1018_2742146=4bysRlIywk6euaR/wKkgDpLg9mYAAAAAghC2DU3s4RXnt8ybUEzrUA==; incap_ses_1024_2742146=/AaoV/Q5zCwPxKJYxvo1Ds7f9mYAAAAAAFDGXNbzP5qAMjVxkfL6Hw==; visid_incap_2742146=kXry+h3LTMOto0B4C075bxKtwGYAAAAAQUIPAAAAAACw9E++EkrinLHuX2NpVjpO', 'Content-Length': '115', 'Authorization': 'Basic dGZLc2xFTUhmQXo0THlVc0hXdVZUZEpiNGRRTEJQbDJDZEF3dXoxaGNGTlgyOWFhOmVlbnl2ZGRIRzg3N0l4WklmVUNyM2Nzd1BxQU10eVN6RUc1SWNHdlh4elhzdmF3dlFnUkJYNGdXaFUzNWN2QTU='} 
+ body={"method": "GET", "service_url": "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"} 
+ </msg>
+<msg time="2024-09-30T17:46:34.967757" level="INFO">POST Response : url=https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials 
+ status=200, reason=OK 
+ headers={'host': 'sandbox.safaricom.co.ke', 'user-agent': 'python-requests/2.32.3', 'accept-encoding': 'gzip, deflate', 'accept': '*/*', 'content-type': 'application/x-www-form-urlencoded', 'cookie': 'XSRF-TOKEN=incap_ses_1018_2742146=4bysRlIywk6euaR/wKkgDpLg9mYAAAAAghC2DU3s4RXnt8ybUEzrUA==', 'content-length': '115', 'authorization': 'Basic dGZLc2xFTUhmQXo0THlVc0hXdVZUZEpiNGRRTEJQbDJDZEF3dXoxaGNGTlgyOWFhOmVlbnl2ZGRIRzg3N0l4WklmVUNyM2Nzd1BxQU10eVN6RUc1SWNHdlh4elhzdmF3dlFnUkJYNGdXaFUzNWN2QTU=', 'cdn-loop': 'IncapCDN; id="1041_2742146_0"', 'x-forwarded-for': '102.167.227.112, 192.230.106.10,10.184.20.60', 'incap-client-ip': '102.167.227.112', 'x-forwarded-proto': 'https', 'x-request-id': 'e800b20a-ad33-4068-8c7f-cd600d1d91b5', 'x-dynatrace': 'FW4;-1055106265;9;701171621;6821883;536870912;643789619;1564;a8e9;2h01;3h29cb07a5;4h6817fb;5h01;6hc4b5483e0d39ea73d517ccf1004a4489;7h6ad0cf3bf047f378', 'tracestate': '265f7333-c11c5b27@dt=fw4;9;29cb07a5;6817fb;0;0;4;61c;6684;2h01;3h29cb07a5;4h6817fb;5h01;7h6ad0cf3bf047f378', 'traceparent': '00-c4b5483e0d39ea73d517ccf1004a4489-6ad0cf3bf047f378-01', 'date': 'Mon, 30 Sep 2024 14:46:34 GMT', 'Set-Cookie': 'incap_ses_1041_2742146=jyA+BSOHT2jsJV9SIWByDsq5+mYAAAAA5pwU4jN8mDV2XzqWRK5Y6g==; path=/; Domain=.safaricom.co.ke; Secure; SameSite=None', 'Strict-Transport-Security': 'max-age=31536000', 'X-CDN': 'Imperva', 'X-Iinfo': '3-15399675-15399691 NNNN CT(112 114 0) RT(1727707594068 187) q(0 0 2 0) r(4 4) U6'} 
+ body={"method": "GET", "service_url": "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"} 
+ </msg>
+<msg time="2024-09-30T17:46:34.968828" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>${QUERY}</arg>
+<arg>data=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>files=${files}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.043510" elapsed="0.925318"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.971065" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.969946" elapsed="0.001119"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.042511" elapsed="0.928554"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.040397" elapsed="0.931812"/>
+</kw>
+<kw name="Then user successfully generates token" owner="keywords">
+<kw name="grab token" owner="Common">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-09-30T17:46:34.982131" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.978772" elapsed="0.004480"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-09-30T17:46:35.041858" level="INFO">${TOKEN} = default</msg>
+<var>${TOKEN}</var>
+<arg>${response.json()}</arg>
+<arg>access_token</arg>
+<arg>default</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-09-30T17:46:34.984298" elapsed="0.058323"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.045355" level="INFO">${FULL_TOKEN} = Bearer default</msg>
+<var>${FULL_TOKEN}</var>
+<arg>Bearer ${TOKEN}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.043847" elapsed="0.001508"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Token is ${FULL_TOKEN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.046476" elapsed="0.000877"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.048412" level="INFO">${BEARER_TOKEN} = Bearer default</msg>
+<arg>${BEARER_TOKEN}</arg>
+<arg>${FULL_TOKEN}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.047643" elapsed="0.001777"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.976532" elapsed="0.072913"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:34.974205" elapsed="0.075240"/>
+</kw>
+<doc>This test case initiates an online Lipa na M-Pesa payment request</doc>
+<tag>Regression</tag>
+<status status="PASS" start="2024-09-30T17:46:34.002166" elapsed="1.048329"/>
+</test>
+<test id="s1-t2" name="Initiate a Lipa na M-Pesa Online Payment" line="20">
+<kw name="Given user sets endpoint with base api https://sandbox.safaricom.co.ke" owner="keywords" source_name="user sets endpoint with base api ${BASE_API}">
+<kw name="session creation ${BASE_API}" owner="Common" source_name="session creation ${API_BASE_ENDPOINT}">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-09-30T17:46:35.060206" level="INFO">Creating Session using : alias=mysession, url=https://sandbox.safaricom.co.ke, headers={},                     cookies={'XSRF-TOKEN': 'incap_ses_1018_2742146=4bysRlIywk6euaR/wKkgDpLg9mYAAAAAghC2DU3s4RXnt8ybUEzrUA==; incap_ses_1024_2742146=/AaoV/Q5zCwPxKJYxvo1Ds7f9mYAAAAAAFDGXNbzP5qAMjVxkfL6Hw==; visid_incap_2742146=kXry+h3LTMOto0B4C075bxKtwGYAAAAAQUIPAAAAAACw9E++EkrinLHuX2NpVjpO'}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${API_BASE_ENDPOINT}</arg>
+<arg>verify=False</arg>
+<arg>auth=${auth}</arg>
+<arg>debug=0</arg>
+<arg>cookies=${cookies}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-09-30T17:46:35.058480" elapsed="0.002001"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.054530" elapsed="0.005951"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.054530" elapsed="0.005951"/>
+</kw>
+<kw name="And user sets headers {&quot;Authorization&quot;: &quot;Bearer f2PGJV17LReBs8RKmCNQBzcQRAVC&quot;,&quot;Content-Type&quot;: &quot;application/json&quot;}" owner="keywords" source_name="user sets headers ${headers}">
+<kw name="add headers ${headers}" owner="Common" source_name="add headers ${headersArgs}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.063514" level="INFO">${header_string} = {'Authorization': 'Bearer f2PGJV17LReBs8RKmCNQBzcQRAVC', 'Content-Type': 'application/json'}</msg>
+<var>${header_string}</var>
+<arg>json.loads('''${headersArgs}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.062935" elapsed="0.000579"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.063514" level="INFO">${headers} = {'Authorization': 'Bearer f2PGJV17LReBs8RKmCNQBzcQRAVC', 'Content-Type': 'application/json'}</msg>
+<arg>${headers}</arg>
+<arg>${header_string}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.063514" elapsed="0.001059"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.062517" elapsed="0.002056"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.061556" elapsed="0.003017"/>
+</kw>
+<kw name="And user sets body ${LIPA_NA_MPESA}" owner="keywords" source_name="user sets body ${body}">
+<kw name="add json body ${body}" owner="Common" source_name="add json body ${body}">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.067777" level="INFO">${json_string} = {"BusinessShortCode": 174379, "Password": "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjQwOTA2MTMzMTI5", "Timestamp": "20240906133129", "Transactio...</msg>
+<var>${json_string}</var>
+<arg>json.dumps(${body})</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.066668" elapsed="0.001109"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.067777" level="INFO">${body} = {"BusinessShortCode": 174379, "Password": "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjQwOTA2MTMzMTI5", "Timestamp": "20240906133129", "Transactio...</msg>
+<arg>${body}</arg>
+<arg>${json_string}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.067777" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.066668" elapsed="0.002221"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.065669" elapsed="0.003220"/>
+</kw>
+<kw name="And user sends a POST Request with query /mpesa/stkpush/v1/processrequest" owner="keywords" source_name="user sends a POST Request with query ${QUERY}">
+<kw name="POST a Request with query ${QUERY}" owner="Common" source_name="POST a Request with query ${QUERY}">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-09-30T17:46:35.878823" level="INFO">POST Request : url=https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest 
+ path_url=/mpesa/stkpush/v1/processrequest 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer f2PGJV17LReBs8RKmCNQBzcQRAVC', 'Content-Type': 'application/json', 'Cookie': 'XSRF-TOKEN=incap_ses_1018_2742146=4bysRlIywk6euaR/wKkgDpLg9mYAAAAAghC2DU3s4RXnt8ybUEzrUA==; incap_ses_1024_2742146=/AaoV/Q5zCwPxKJYxvo1Ds7f9mYAAAAAAFDGXNbzP5qAMjVxkfL6Hw==; visid_incap_2742146=kXry+h3LTMOto0B4C075bxKtwGYAAAAAQUIPAAAAAACw9E++EkrinLHuX2NpVjpO', 'Content-Length': '430'} 
+ body={"BusinessShortCode": 174379, "Password": "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjQwOTA2MTMzMTI5", "Timestamp": "20240906133129", "TransactionType": "CustomerPayBillOnline", "Amount": 1, "PartyA": 254799179374, "PartyB": 174379, "PhoneNumber": 254799179374, "CallBackURL": "https://mydomain.com/path", "AccountReference": "CompanyXLTD", "TransactionDesc": "Payment of X"} 
+ </msg>
+<msg time="2024-09-30T17:46:35.878823" level="INFO">POST Response : url=https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest 
+ status=200, reason=OK 
+ headers={'content-type': 'application/json;charset=UTF-8', 'cache-control': 'no-store', 'x-request-id': '55f75d22-3620-4d15-a9b4-988e1dcf52c8', 'date': 'Mon, 30 Sep 2024 14:46:35 GMT', 'Set-Cookie': 'incap_ses_1041_2742146=7j2cVSsQwFMZqF9SIWByDsu5+mYAAAAANI0excEU2iNXtiT3ZhP98A==; path=/; Domain=.safaricom.co.ke; Secure; SameSite=None', 'Strict-Transport-Security': 'max-age=31536000', 'X-CDN': 'Imperva', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'X-Iinfo': '3-15399769-15399691 PNYN RT(1727707594997 218) q(0 0 0 -1) r(3 3) U6'} 
+ body={
+            "MerchantRequestID":"dad6-4c34-8787-c8cb963a496d128198",
+            "CheckoutRequestID":"ws_CO_30092024174656379799179374",
+            "ResponseCode": "0",
+            "ResponseDescription":"Success. Request accepted for processing",
+            "CustomerMessage":"Success. Request accepted for processing"
+        }
+         
+ </msg>
+<msg time="2024-09-30T17:46:35.878823" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>${QUERY}</arg>
+<arg>data=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>files=${files}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.070993" elapsed="0.807830"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.881192" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.880017" elapsed="0.001175"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.069889" elapsed="0.811303"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.069229" elapsed="0.811963"/>
+</kw>
+<kw name="Then user recieves valid HTTP response code 200" owner="keywords" source_name="user recieves valid HTTP response code ${res_code}">
+<kw name="confirm response code ${res_code}" owner="Common" source_name="confirm response code ${res_code}">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.889037" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<arg>${res_code}</arg>
+<arg>${response.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.887028" elapsed="0.002009"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.884790" elapsed="0.004247"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.883635" elapsed="0.006331"/>
+</kw>
+<kw name="Then user confirms Success. Request accepted for processing is present in response" owner="keywords" source_name="user confirms ${isInResponse} is present in response">
+<kw name="confirm is present in response ${isInResponse}" owner="Common" source_name="confirm is present in response ${KeyInResponse}">
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.896374" level="INFO">${body} = {
+            "MerchantRequestID":"dad6-4c34-8787-c8cb963a496d128198",
+            "CheckoutRequestID":"ws_CO_30092024174656379799179374",
+            "ResponseCode": "0",
+            "ResponseDescrip...</msg>
+<var>${body}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.894139" elapsed="0.002235"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${body}</arg>
+<arg>${KeyInResponse}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.897463" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-09-30T17:46:35.901811" level="INFO">${key} = Success. Request accepted for processing</msg>
+<arg>${key}</arg>
+<arg>${KeyInResponse}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-09-30T17:46:35.898549" elapsed="0.003262"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.893051" elapsed="0.008760"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.891968" elapsed="0.010849"/>
+</kw>
+<status status="PASS" start="2024-09-30T17:46:35.052569" elapsed="0.852438"/>
+</test>
+<doc>DARAJA API AUTOMATION TESTS</doc>
+<meta name="Author">Enock Odhiambo Omondi</meta>
+<meta name="Version">1.0.0</meta>
+<status status="PASS" start="2024-09-30T17:46:32.654940" elapsed="3.254099"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="TC2 POST InitiatePayment">TC2 POST InitiatePayment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
