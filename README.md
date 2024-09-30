@@ -1,6 +1,11 @@
 # DARAJA-API-AUTOMATION-TESTS
 This project automates the testing of Safaricom's Daraja API using Robot Framework and RequestsLibrary. It covers generating OAuth access tokens and initiating Lipa na M-Pesa Online Payment requests.
 
+![image](https://github.com/user-attachments/assets/960195da-ef9e-40e4-b199-e104a7096fff)
+![image](https://github.com/user-attachments/assets/20091eaa-ab24-4c66-9bb9-32dd3fb34f42)
+
+
+
 ## Technologies Used
 - Robot Framework
 - RequestsLibrary
